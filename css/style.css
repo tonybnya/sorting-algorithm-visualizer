@@ -1,0 +1,210 @@
+/*
+Fonts
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+/*
+Variables
+*/
+:root {
+    /* Fonts */
+    --ff-1: 'Roboto', sans-serif;
+    --ff-2: 'Open Sans', sans-serif;
+    /* Colors */
+    --clr-1: rgb(46, 67, 86);
+    --clr-2: rgb(204, 225, 52);
+    --clr-3: rgb(251, 213, 51);
+    --clr-4: rgb(144, 201, 193);
+    --clr-5: #fff;
+    --clr-6: #222;
+    --clr-7: hsl(205, 86%, 17%);
+    --clr-8: hsl(205, 77%, 27%);
+    --clr-9: hsl(205, 72%, 37%);
+    --clr-10: hsl(205, 63%, 48%);
+    --clr-11: hsl(205, 78%, 60%);
+    --clr-12: hsl(205, 89%, 70%);
+    --clr-13: hsl(205, 90%, 76%);
+    --clr-14: hsl(205, 86%, 81%);
+    --clr-15: hsl(205, 90%, 88%);
+    --clr-16: hsl(205, 100%, 96%);
+    --clr-17: hsl(209, 61%, 16%);
+    --clr-18: hsl(211, 39%, 23%);
+    --clr-19: hsl(209, 34%, 30%);
+    --clr-20: hsl(209, 28%, 39%);
+    --clr-21: hsl(210, 22%, 49%);
+    --clr-22: hsl(209, 23%, 60%);
+    --clr-23: hsl(211, 27%, 70%);
+    --clr-24: hsl(210, 31%, 80%);
+    --clr-25: hsl(212, 33%, 89%);
+    --clr-26: hsl(210, 36%, 96%);
+    --clr-27: hsl(360, 67%, 44%);
+    --clr-28: hsl(360, 71%, 66%);
+    --clr-29: hsl(125, 67%, 44%);
+    --clr-30: hsl(125, 71%, 66%);
+    /* Global */
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --fixed-width: 620px;  
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --max-width: 1170px;
+    --radius: 0.25rem;
+    --spacing: 0.1rem;
+    --transition: all 0.3s linear;
+}
+
+/*
+Global Styles
+*/
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--ff-2);
+    background: var(--clr-26);
+    color: var(--clr-1);
+    line-height: 1.5;
+    font-size: 0.875rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: var(--clr-1);
+}
+img:not(.logo) {
+    width: 100%;
+}
+img {
+    display: block;
+}
+main {
+    min-height: 70vh;
+    display: grid;
+    place-items: center;
+}
+
+/* Navbar */
+nav {
+    background: var(--clr-5);
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+    box-shadow: var(--dark-shadow);
+}
+.nav-center {
+    width: 90vw;
+    max-width: var(--fixed-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.logo {
+    height: 50px;
+}
+.social-icons {
+    display: flex;
+}
+.social-icons a {
+    margin: 0 0.5rem;
+    color: var(--clr-8);
+    transition: var(--transition);
+}
+.social-icons a:hover {
+    color: var(--clr-9);
+}
+
+/* Menu */
+.menu {
+    padding: 1rem 0;
+}
+.title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+.algo-btn,
+.reset-btn {
+    font-family: var(--ff-1);
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    display: inline-block;
+    font-weight: 400;
+    transition: var(--transition);
+    border: 2px solid var(--clr-5);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+}
+.reset-btn {
+    color: var(--clr-5);
+    background: var(--clr-10);
+}
+.reset-btn:hover {
+    color: var(--clr-5);
+    background: var(--clr-27);
+}
+.algo-btn {
+    color: var(--clr-6);
+    background: transparent;
+}
+.algo-btn:hover {
+    color: var(--clr-5);
+    background: var(--clr-6);
+}
+
+/* Main */
+#container {
+    transform: rotateX(180deg);
+    display: flex;
+    justify-content: center;
+}
+#visual {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    width: 80vw;
+    border: 2px solid var(--clr-5);
+}
+#visual div {
+    display: inline-block;
+    margin: 1px;
+    height: 100px;
+    width: 7px;
+    background-color: var(--clr-10);
+}
+
+/* Footer */
+footer {
+    padding: 0.5rem 0.5rem;
+}
+footer p {
+    color: var(--clr-6);
+    text-align: center;
+    letter-spacing: var(--spacing);
+    font-weight: bold;
+}
